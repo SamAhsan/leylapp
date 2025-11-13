@@ -1,0 +1,17 @@
+{
+  "name": "Leylapp - AI Companion",
+  "short_name": "Leylapp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060A",
+  "theme_color": "#E3007B",
+  "description": "Leylapp remembers your world, chats in natural voice, and supports you 24/7.",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

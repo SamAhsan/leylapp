@@ -1,0 +1,23 @@
+﻿<svg width="360" height="720" viewBox="0 0 360 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f1b2e"/>
+      <stop offset="100%" stop-color="#3b1f3f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF4FB1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="720" rx="48" fill="url(#bg)"/>
+  <rect x="40" y="120" width="280" height="120" rx="28" fill="url(#card)" opacity="0.9"/>
+  <rect x="40" y="260" width="280" height="80" rx="24" fill="#ffffff0d"/>
+  <rect x="40" y="360" width="280" height="80" rx="24" fill="#ffffff14"/>
+  <rect x="40" y="460" width="280" height="140" rx="32" fill="#ffffff0d"/>
+  <circle cx="80" cy="300" r="18" fill="#F472B6"/>
+  <circle cx="120" cy="300" r="18" fill="#C084FC"/>
+  <circle cx="160" cy="300" r="18" fill="#38BDF8"/>
+  <text x="60" y="180" font-family="Inter, sans-serif" font-size="18" fill="#fff" opacity="0.9">Leylapp remembers</text>
+  <text x="60" y="212" font-family="Inter, sans-serif" font-size="14" fill="#fff" opacity="0.65">Weekly check-in ready.</text>
+</svg>
+

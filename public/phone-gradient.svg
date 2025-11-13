@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="240" height="480" viewBox="0 0 240 480">
+  <defs>
+    <linearGradient id="pg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1627"/>
+      <stop offset="100%" stop-color="#2a0f2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="480" rx="48" fill="url(#pg)"/>
+  <rect x="32" y="120" width="176" height="80" rx="24" fill="#ffffff22"/>
+  <rect x="32" y="220" width="176" height="60" rx="20" fill="#ffffff16"/>
+  <rect x="32" y="300" width="176" height="60" rx="20" fill="#ffffff10"/>
+  <rect x="32" y="380" width="176" height="80" rx="24" fill="#ffffff22"/>
+  <text x="48" y="168" font-family="Inter, sans-serif" font-size="20" fill="#fff">Memories</text>
+</svg>

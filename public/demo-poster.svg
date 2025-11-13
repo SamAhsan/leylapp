@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="poster" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1b0f24"/>
+      <stop offset="100%" stop-color="#2f1029"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="32" fill="url(#poster)"/>
+  <rect x="80" y="80" width="800" height="180" rx="24" fill="#ffffff11"/>
+  <rect x="80" y="300" width="500" height="120" rx="24" fill="#ffffff08"/>
+  <rect x="600" y="300" width="280" height="120" rx="24" fill="#ffffff15"/>
+  <text x="120" y="155" font-family="Inter, sans-serif" font-size="48" fill="#fff">Leylapp Live Demo</text>
+  <text x="120" y="210" font-family="Inter, sans-serif" font-size="24" fill="#ffffff99">30s voice check-in with waveform</text>
+</svg>
+

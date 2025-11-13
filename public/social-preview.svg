@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f051d"/>
+      <stop offset="100%" stop-color="#33091e"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#E3007B"/>
+      <stop offset="50%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  <circle cx="900" cy="120" r="180" fill="#E3007B20"/>
+  <circle cx="300" cy="510" r="220" fill="#C084FC20"/>
+  <text x="120" y="260" font-family="Inter, 'Segoe UI', sans-serif" font-size="72" font-weight="800" fill="url(#textGrad)">Leylapp</text>
+  <text x="120" y="340" font-family="Inter, 'Segoe UI', sans-serif" font-size="42" fill="#ffffffdd">Your AI companion who listens,</text>
+  <text x="120" y="390" font-family="Inter, 'Segoe UI', sans-serif" font-size="42" fill="#ffffffdd">learns, and cares.</text>
+  <text x="120" y="460" font-family="Inter, 'Segoe UI', sans-serif" font-size="28" fill="#ffffff99">Voice Â· Memory Â· Safety</text>
+</svg>
+
