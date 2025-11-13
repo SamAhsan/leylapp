@@ -16,7 +16,7 @@ const Navbar = () => {
           <img
             src="/leylapplogo.png"
             alt="Leylapp logo"
-            className="h-20 w-auto object-contain md:h-32 lg:h-36"
+            className="h-24 w-auto object-contain md:h-32 lg:h-36"
           />
           <span className="sr-only">Leylapp</span>
         </Link>
