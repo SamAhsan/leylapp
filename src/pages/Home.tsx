@@ -17,7 +17,7 @@ const homeJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Leylapp â€” AI Girlfriend App',
+    name: 'Leylapp — AI Girlfriend App',
     description:
       'Leylapp remembers your world, chats in natural voice, and supports you 24/7 with privacy controls.',
     brand: 'Leylapp',
@@ -58,8 +58,8 @@ const homeJsonLd = [
 const Home = () => (
   <>
     <SEO
-      title="Leylapp â€” AI Girlfriend App with Voice & Memory"
-      description="Chat or talk with Leylapp â€” your AI companion who listens, remembers, and supports you 24/7. Private by design. iOS & Android."
+      title="Leylapp — AI Girlfriend App with Voice & Memory"
+      description="Chat or talk with Leylapp — your AI companion who listens, remembers, and supports you 24/7. Private by design. iOS & Android."
       path="/"
       jsonLd={homeJsonLd}
     />
@@ -80,7 +80,7 @@ const Home = () => (
               Your AI companion who listens, learns, and cares.
             </h1>
             <p className="text-lg text-neutral-600 md:text-xl">
-              Leylapp remembers your world, chats in natural voice, and is there 24/7 â€” judgment-free.
+              Leylapp remembers your world, chats in natural voice, and is there 24/7” judgment-free.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -93,11 +93,7 @@ const Home = () => (
           </div>
           <AppStoreButtons />
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 text-xl text-primary-500">
-              {Array.from({ length: 5 }).map((_, idx) => (
-                <span key={idx}>â˜…</span>
-              ))}
-            </div>
+           
             <p className="text-sm text-neutral-500">4.9 average rating - 2,100+ daily conversations</p>
           </div>
         </motion.div>
@@ -131,8 +127,8 @@ const Home = () => (
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {howItWorksSteps.map((step) => (
             <div key={step.title} className="glass-panel p-6">
-              <div className="mb-4 inline-flex rounded-2xl bg-primary-600/20 p-3 text-primary-100">
-                <step.icon className="h-6 w-6" aria-hidden />
+              <div className="mb-4 inline-flex rounded-2xl bg-primary-50 p-4 text-primary-600 shadow-inner">
+                <step.icon className="h-7 w-7" aria-hidden />
               </div>
               <h3 className="text-xl font-semibold">{step.title}</h3>
               <p className="text-sm text-neutral-600">{step.description}</p>
@@ -195,7 +191,7 @@ const Home = () => (
           </CTAButton>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6">
             <p className="text-sm text-neutral-200">
-              â€œYour data, your rules. Review, export, or delete anytime.â€ â€” Leylapp Safety Team
+              “Your data, your rules. Review, export, or delete anytime.” — Leylapp Safety Team
             </p>
           </div>
         </div>
@@ -247,7 +243,7 @@ const Home = () => (
           </div>
           <div className="flex items-center gap-2 text-primary-500">
             {Array.from({ length: 5 }).map((_, idx) => (
-              <span key={idx}>â˜…</span>
+              <span key={idx}>★</span>
             ))}
             <span className="text-sm text-neutral-500">4.9 average</span>
           </div>
@@ -275,7 +271,6 @@ const Home = () => (
 );
 
 export default Home;
-
 
 
 

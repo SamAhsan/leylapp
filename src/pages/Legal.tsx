@@ -25,7 +25,7 @@ const legalContent: Record<
     title: 'Privacy Policy',
     description: 'What we collect, why, and how you can control or delete it.',
     sections: [
-      { id: 'data', title: '1. Data we collect', body: 'Only the info you give us â€” conversations, preferences, optional memory pins, and diagnostics.' },
+      { id: 'data', title: '1. Data we collect', body: 'Only the info you give us — conversations, preferences, optional memory pins, and diagnostics.' },
       { id: 'control', title: '2. Control', body: 'View, export, or delete data anytime in-app or by emailing privacy@Leylapp.app.' },
       { id: 'storage', title: '3. Storage', body: 'We use encrypted storage with region-based redundancy. Deleted data is purged within 24 hours.' },
     ],
@@ -51,7 +51,7 @@ const LegalPage = ({ type }: LegalPageProps) => {
   return (
     <>
       <SEO
-        title={`${content.title} â€” Leylapp`}
+        title={`${content.title} — Leylapp`}
         description={content.description}
         path={`/${type === 'terms' ? 'terms' : type === 'privacy' ? 'privacy' : 'cookies'}`}
       />

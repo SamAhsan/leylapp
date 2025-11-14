@@ -24,12 +24,12 @@ export type DetailedFeature = {
 export const howItWorksSteps = [
   {
     title: 'Say hi',
-    description: 'Text or talk naturally â€” Leylapp mirrors your pace and tone in seconds.',
+    description: 'Text or talk naturally — Leylapp mirrors your pace and tone in seconds.',
     icon: MessageCircleHeart,
   },
   {
     title: 'Connect',
-    description: 'She remembers what matters â€” your preferences, mood, and goals.',
+    description: 'She remembers what matters — your preferences, mood, and goals.',
     icon: Brain,
   },
   {
@@ -95,7 +95,7 @@ export const featureSections: DetailedFeature[] = [
     eyebrow: 'Consent-first memory',
     title: 'Long-term memory you can edit anytime.',
     description:
-      'Leylapp highlights what she thinks matters â€” you decide what gets saved, tweaked, or wiped. Export or delete your history in one tap.',
+      'Leylapp highlights what she thinks matters — you decide what gets saved, tweaked, or wiped. Export or delete your history in one tap.',
     bullets: ['Memory cards you can pin or snooze', 'Weekly reminders to review data', 'Full export in portable JSON'],
     media: {
       label: 'Memory board',

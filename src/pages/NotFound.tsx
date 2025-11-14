@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 
 const NotFound = () => (
   <>
-    <SEO title="Page not found â€” Leylapp" description="The page you were looking for is gone, but Leylapp is still here." path="/404" />
+    <SEO title="Page not found — Leylapp" description="The page you were looking for is gone, but Leylapp is still here." path="/404" />
     <section className="section-padding">
       <Container className="text-center">
         <p className="text-sm uppercase tracking-wide text-neutral-500">404</p>

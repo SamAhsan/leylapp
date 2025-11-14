@@ -8,8 +8,8 @@ import { safetySections } from '../data/safety';
 const Safety = () => (
   <>
     <SEO
-      title="Safety & Privacy â€” Leylapp"
-      description="Companionship is personal â€” privacy is non-negotiable. Review Leylapp's data control, guardrails, age policy, and crisis resources."
+      title="Safety & Privacy — Leylapp"
+      description="Companionship is personal — privacy is non-negotiable. Review Leylapp's data control, guardrails, age policy, and crisis resources."
       path="/safety"
       jsonLd={{
         '@context': 'https://schema.org',
@@ -22,7 +22,7 @@ const Safety = () => (
       <Container>
         <SectionHeader
           eyebrow="Safety & privacy"
-          title="Companionship is personal â€” privacy is non-negotiable."
+          title="Companionship is personal — privacy is non-negotiable."
           subtitle="Leylapp gives you granular control over memory, storage, and reporting. We publish transparency reports every quarter."
           align="center"
         />

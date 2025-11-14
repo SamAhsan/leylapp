@@ -20,7 +20,7 @@ const Support = () => {
   return (
     <>
       <SEO
-        title="Support â€” Leylapp"
+        title="Support — Leylapp"
         description="Reset passwords, manage subscriptions, report bugs, or contact the Leylapp team."
         path="/support"
       />
@@ -28,14 +28,14 @@ const Support = () => {
         <Container>
           <SectionHeader
             eyebrow="Support"
-            title="Help is here â€” day or night."
+            title="Help is here — day or night."
             subtitle="Use the quick links below or send a note. We usually respond within a day."
             align="center"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {supportLinks.map((link) => (
               <Link key={link.label} to={link.href} className="rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-900 shadow-card">
-                {link.label} â†’
+                {link.label} →
               </Link>
             ))}
           </div>

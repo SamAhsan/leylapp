@@ -7,7 +7,7 @@ export const faqItems: FaqItem[] = [
   {
     question: 'Is Leylapp a human?',
     answer:
-      'Leylapp is fully AI â€” a blend of voice models, memory graphs, and safety guardrails. She is transparent about being AI in every interaction.',
+      'Leylapp is fully AI — a blend of voice models, memory graphs, and safety guardrails. She is transparent about being AI in every interaction.',
   },
   {
     question: 'How is my data used?',

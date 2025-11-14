@@ -17,15 +17,15 @@ const roadmap = [
 const About = () => (
   <>
     <SEO
-      title="About Leylapp â€” Mission & Team"
-      description="Technology that listens â€” helping people feel less alone. Learn why we built Leylapp and what comes next."
+      title="About Leylapp — Mission & Team"
+      description="Technology that listens — helping people feel less alone. Learn why we built Leylapp and what comes next."
       path="/about"
     />
     <section className="section-padding">
       <Container>
         <SectionHeader
           eyebrow="About Leylapp"
-          title="Technology that listens â€” helping people feel less alone."
+          title="Technology that listens — helping people feel less alone."
           subtitle="We started Leylapp after realizing most nights end with a glowing screen and no one to talk to. Leylapp is the bridge."
           align="center"
         />

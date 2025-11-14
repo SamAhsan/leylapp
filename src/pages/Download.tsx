@@ -23,8 +23,16 @@ const Download = () => (
         </div>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6 text-center">
           <p className="text-sm uppercase tracking-wide text-neutral-500">Device preview</p>
-          <img src="/phone-gradient.svg" alt="Leylapp device screenshot" className="mx-auto mt-4 w-56" loading="lazy" />
-          <p className="mt-4 text-sm text-neutral-600">Screenshots swap each release â€” drop your own in /public.</p>
+          <div className="relative mt-4 flex justify-center">
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-primary-500/15 blur-3xl" aria-hidden />
+            <img
+              src="/hero.png"
+              alt="Leylapp conversation preview"
+              className="relative z-10 w-full max-w-sm rounded-[2.5rem] border border-neutral-200 shadow-2xl"
+              loading="lazy"
+            />
+          </div>
+          <p className="mt-4 text-sm text-neutral-600">Screenshots swap each release - drop your own in /public.</p>
         </div>
       </Container>
     </section>

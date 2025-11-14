@@ -14,7 +14,7 @@ const Features = () => {
   return (
     <>
       <SEO
-        title="Leylapp Features â€” Voice, Memory, Safety"
+        title="Leylapp Features — Voice, Memory, Safety"
         description="Explore Leylapp's natural voice, long-term memory, custom personalities, rituals, and safety center."
         path="/features"
       />
