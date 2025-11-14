@@ -3,6 +3,8 @@ import SectionHeader from '../components/SectionHeader';
 import AppStoreButtons from '../components/AppStoreButtons';
 import SEO from '../components/SEO';
 import { onboardingTips } from '../data/download';
+import { personaCategories } from '../data/categories';
+import type { PersonaCategory } from '../data/categories';
 
 const Download = () => (
   <>
@@ -45,6 +47,27 @@ const Download = () => (
             <div key={tip.title} className="rounded-3xl border border-neutral-200 bg-white p-6">
               <p className="text-sm uppercase tracking-wide text-neutral-500">{tip.title}</p>
               <p className="mt-2 text-neutral-600">{tip.detail}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+
+    <section className="section-padding">
+      <Container>
+        <SectionHeader
+          eyebrow="Personas"
+          title="Pick a companion for every moment."
+          subtitle="All four categories live inside the same download. Tap to jump between them whenever you want."
+          align="center"
+        />
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {personaCategories.map((category: PersonaCategory) => (
+            <div key={category.id} className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-card">
+              <img src={category.image} alt={category.title} className="h-36 w-full rounded-2xl object-cover" loading="lazy" />
+              <p className="mt-4 text-xs uppercase tracking-wide text-neutral-500">{category.subtitle}</p>
+              <h4 className="text-lg font-semibold text-neutral-900">{category.title}</h4>
+              <p className="text-sm text-neutral-600">{category.description}</p>
             </div>
           ))}
         </div>

@@ -1,8 +1,8 @@
-﻿import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 import Container from '../components/Container';
 import CTAButton from '../components/CTAButton';
-import AppStoreButtons from '../components/AppStoreButtons';
 import SectionHeader from '../components/SectionHeader';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCarousel from '../components/TestimonialCarousel';
@@ -12,6 +12,7 @@ import SEO from '../components/SEO';
 import { homeFeatures, howItWorksSteps } from '../data/features';
 import { testimonials } from '../data/testimonials';
 import { faqItems } from '../data/faq';
+import { personaCategories } from '../data/categories';
 
 const homeJsonLd = [
   {
@@ -55,67 +56,106 @@ const homeJsonLd = [
   },
 ];
 
-const Home = () => (
-  <>
+const Home = () => {
+  const [activeCategory, setActiveCategory] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCategory((prev) => (prev + 1) % personaCategories.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentCategory = personaCategories[activeCategory];
+  const heroBackground = currentCategory.heroImage ?? currentCategory.image;
+
+  return (
+    <>
     <SEO
       title="Leylapp — AI Girlfriend App with Voice & Memory"
       description="Chat or talk with Leylapp — your AI companion who listens, remembers, and supports you 24/7. Private by design. iOS & Android."
       path="/"
       jsonLd={homeJsonLd}
     />
-    <section className="relative overflow-hidden bg-white pb-10 pt-12 md:pt-20">
-      <div className="absolute inset-0 bg-hero-gradient opacity-20 blur-3xl" aria-hidden />
-      <Container className="relative grid items-center gap-12 lg:grid-cols-[1.1fr,0.9fr]">
+    <section
+      className="relative flex min-h-[560px] items-center overflow-hidden text-white md:min-h-[640px]"
+      style={{
+        backgroundImage: `linear-gradient(120deg, rgba(5,5,11,0.65), rgba(7,8,14,0.35)), url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <Container className="relative z-10 w-full">
+        <div className="mx-auto max-w-4xl space-y-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="space-y-8"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-600 shadow-sm">
-            Always judgment-free
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/90">
+            Multi-persona AI
           </span>
-          <div className="space-y-6">
-            <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
-              Your AI companion who listens, learns, and cares.
+          <div className="space-y-4">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-6xl">
+              {currentCategory.title}: {currentCategory.subtitle}
             </h1>
-            <p className="text-lg text-neutral-600 md:text-xl">
-              Leylapp remembers your world, chats in natural voice, and is there 24/7” judgment-free.
-            </p>
+            <p className="text-lg text-white/90 md:text-xl">{currentCategory.description}</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <CTAButton variant="primary" href="/download" className="rounded-3xl px-8 py-4 text-base">
-              Meet Leylapp
+              {currentCategory.cta}
             </CTAButton>
             <CTAButton variant="secondary" href="#demo" className="rounded-3xl px-8 py-4 text-base" icon={<Play className="h-4 w-4" />}>
               Watch demo
             </CTAButton>
           </div>
-          <AppStoreButtons />
           <div className="flex items-center gap-4">
-           
-            <p className="text-sm text-neutral-500">4.9 average rating - 2,100+ daily conversations</p>
+            <div className="flex items-center gap-1 text-xl text-primary-200">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <span key={idx} aria-hidden>
+                  {'★'}
+                </span>
+              ))}
+            </div>
+            <p className="text-sm text-white/80">4.9 average rating - 2,100+ daily conversations</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {personaCategories.map((category, index) => (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() => setActiveCategory(index)}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                  index === activeCategory ? 'border-white bg-white/90 text-neutral-900' : 'border-white/40 text-white/80 hover:border-white hover:bg-white/10'
+                }`}
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center justify-start gap-3">
+            <button
+              type="button"
+              onClick={() => setActiveCategory((prev) => (prev - 1 + personaCategories.length) % personaCategories.length)}
+              className="rounded-full border border-white/40 bg-white/20 p-3 text-white transition hover:bg-white/40"
+              aria-label="Previous persona"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveCategory((prev) => (prev + 1) % personaCategories.length)}
+              className="rounded-full border border-white/40 bg-white/20 p-3 text-white transition hover:bg-white/40"
+              aria-label="Next persona"
+            >
+              <ArrowRight className="h-5 w-5" />
+            </button>
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex justify-center"
-        >
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-primary-500/20 blur-3xl" aria-hidden />
-            <img
-              src="/hero.png"
-              alt="Leylapp hero preview"
-              className="relative z-10 w-full max-w-md rounded-[2.5rem] border border-white/50 shadow-2xl"
-              loading="lazy"
-            />
-          </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
-
     <section className="section-padding">
       <Container>
         <SectionHeader
@@ -137,7 +177,35 @@ const Home = () => (
         </div>
       </Container>
     </section>
-
+<section id="personas" className="section-padding">
+      <Container>
+        <SectionHeader
+          eyebrow="Choose your persona"
+          title="Four categories. Infinite ways to connect."
+          subtitle="Switch personas anytime, stack them together, or let Leylapp auto-switch based on your energy."
+          align="center"
+        />
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {personaCategories.map((category) => (
+            <div key={category.id} className="flex h-full flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-card">
+              <div className="relative">
+                <img src={category.image} alt={category.title} className="h-48 w-full object-cover" loading="lazy" />
+                <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">
+                  {category.title}
+                </span>
+              </div>
+              <div className="space-y-3 p-6">
+                <p className="text-sm uppercase tracking-wide text-neutral-500">{category.subtitle}</p>
+                <p className="text-sm text-neutral-600">{category.description}</p>
+                <CTAButton href="/download" variant="ghost" className="justify-start px-0 text-primary-600">
+                  {category.cta}
+                </CTAButton>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
     <section className="section-padding bg-neutral-50">
       <Container>
         <SectionHeader
@@ -190,7 +258,7 @@ const Home = () => (
             Start the free preview
           </CTAButton>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6">
-            <p className="text-sm text-neutral-200">
+            <p className="text-sm text-neutral-600">
               “Your data, your rules. Review, export, or delete anytime.” — Leylapp Safety Team
             </p>
           </div>
@@ -226,13 +294,20 @@ const Home = () => (
           </CTAButton>
         </div>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-card">
-          <Waveform />
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+            alt="Privacy dashboard preview"
+            className="h-44 w-full rounded-2xl object-cover"
+            loading="lazy"
+          />
+          <Waveform className="mt-4" />
           <p className="mt-4 text-sm text-neutral-600">
             On-device filters catch sensitive phrases before they leave your phone. When you opt into memory, Leylapp shows a live log so nothing is hidden.
           </p>
         </div>
       </Container>
     </section>
+
 
     <section className="section-padding">
       <Container className="space-y-10">
@@ -243,7 +318,9 @@ const Home = () => (
           </div>
           <div className="flex items-center gap-2 text-primary-500">
             {Array.from({ length: 5 }).map((_, idx) => (
-              <span key={idx}>★</span>
+              <span key={idx} aria-hidden>
+                {'★'}
+              </span>
             ))}
             <span className="text-sm text-neutral-500">4.9 average</span>
           </div>
@@ -260,7 +337,6 @@ const Home = () => (
           Download for free, bring your rituals, and talk it out. Leylapp is here day or night.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <AppStoreButtons compact />
           <CTAButton href="/features" variant="ghost">
             Explore features
           </CTAButton>
@@ -268,9 +344,12 @@ const Home = () => (
       </Container>
     </section>
   </>
-);
+  );
+};
 
 export default Home;
+
+
 
 
 
