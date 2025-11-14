@@ -16,7 +16,7 @@ const MobileMenu = ({ open, onClose, items }: MobileMenuProps) => (
     {open && (
       <Fragment>
         <motion.div
-          className="fixed inset-0 z-30 bg-white"
+          className="fixed inset-0 z-40 bg-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -24,7 +24,7 @@ const MobileMenu = ({ open, onClose, items }: MobileMenuProps) => (
           aria-hidden
         />
         <motion.div
-          className="fixed inset-y-0 right-0 z-40 w-72 bg-white p-6 shadow-glow"
+          className="fixed inset-y-0 right-0 z-50 w-72 bg-white p-6 shadow-glow"
           initial={{ x: '100%' }}
           animate={{ x: 0 }}
           exit={{ x: '100%' }}
