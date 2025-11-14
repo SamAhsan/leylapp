@@ -2,6 +2,7 @@
 import SectionHeader from '../components/SectionHeader';
 import AppStoreButtons from '../components/AppStoreButtons';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 import { onboardingTips } from '../data/download';
 import { personaCategories } from '../data/categories';
 import type { PersonaCategory } from '../data/categories';
@@ -13,14 +14,17 @@ const Download = () => (
       description="Scan the QR code or tap the store links to download Leylapp for iOS and Android."
       path="/download"
     />
+    <PageHero
+      eyebrow="Download"
+      title="Leylapp on iOS & Android."
+      description="Scan the QR code, tap the store buttons, or share Leylapp via a short link. Your personas sync everywhere."
+      image="/assistent.jpg"
+      ctaLabel="Get the app"
+      ctaHref="/download"
+    />
     <section className="section-padding">
       <Container className="grid gap-10 lg:grid-cols-[1fr,0.8fr]">
         <div>
-          <SectionHeader
-            eyebrow="Download"
-            title="Leylapp on iOS & Android."
-            subtitle="Scan the QR code or tap the store button to open directly on your device."
-          />
           <AppStoreButtons className="mt-6" />
         </div>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6 text-center">

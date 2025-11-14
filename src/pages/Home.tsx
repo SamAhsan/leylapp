@@ -295,9 +295,9 @@ const Home = () => {
         </div>
         <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-card">
           <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+            src="/safety.jpg"
             alt="Privacy dashboard preview"
-            className="h-44 w-full rounded-2xl object-cover"
+            className="h-100 w-full rounded-2xl object-cover"
             loading="lazy"
           />
           <Waveform className="mt-4" />

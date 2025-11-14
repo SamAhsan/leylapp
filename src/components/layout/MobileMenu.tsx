@@ -24,7 +24,7 @@ const MobileMenu = ({ open, onClose, items }: MobileMenuProps) => (
           aria-hidden
         />
         <motion.div
-          className="fixed inset-y-0 right-0 z-50 w-72 bg-white p-6 shadow-glow"
+          className="fixed inset-0 z-50 w-full bg-white p-6 shadow-glow sm:inset-y-0 sm:right-0 sm:w-80"
           initial={{ x: '100%' }}
           animate={{ x: 0 }}
           exit={{ x: '100%' }}

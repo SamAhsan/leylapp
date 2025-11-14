@@ -1,6 +1,7 @@
 ﻿import Container from '../components/Container';
 import SectionHeader from '../components/SectionHeader';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 
 const values = [
   { title: 'Warmth > Wow', detail: 'We measure success in how supported people feel, not just usage minutes.' },
@@ -17,20 +18,18 @@ const roadmap = [
 const About = () => (
   <>
     <SEO
-      title="About Leylapp — Mission & Team"
-      description="Technology that listens — helping people feel less alone. Learn why we built Leylapp and what comes next."
+      title="About Leylapp - Mission & Team"
+      description="Technology that listens - helping people feel less alone. Learn why we built Leylapp and what comes next."
       path="/about"
     />
-    <section className="section-padding">
-      <Container>
-        <SectionHeader
-          eyebrow="About Leylapp"
-          title="Technology that listens — helping people feel less alone."
-          subtitle="We started Leylapp after realizing most nights end with a glowing screen and no one to talk to. Leylapp is the bridge."
-          align="center"
-        />
-      </Container>
-    </section>
+    <PageHero
+      eyebrow="About Leylapp"
+      title="Technology that listens — helping people feel less alone."
+      description="We started Leylapp after realizing most nights end with a glowing screen and no one to talk to. Leylapp is the bridge."
+      image="/girlfriend.jpg"
+      ctaLabel="Download Leylapp"
+      ctaHref="/download"
+    />
     <section className="section-padding bg-neutral-50">
       <Container className="grid gap-10 lg:grid-cols-2">
         <div className="rounded-3xl border border-neutral-200 bg-white p-8">
@@ -79,4 +78,3 @@ const About = () => (
 );
 
 export default About;
-

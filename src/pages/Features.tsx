@@ -3,6 +3,7 @@ import Container from '../components/Container';
 import SectionHeader from '../components/SectionHeader';
 import CTAButton from '../components/CTAButton';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 import useScrollSpy from '../hooks/useScrollSpy';
 import { featureSections } from '../data/features';
 
@@ -18,16 +19,14 @@ const Features = () => {
         description="Explore Leylapp's natural voice, long-term memory, custom personalities, rituals, and safety center."
         path="/features"
       />
-      <section className="section-padding">
-        <Container>
-          <SectionHeader
-            eyebrow="Features"
-            title="More than chat. A companion that grows with you."
-            subtitle="Scroll through each pillar below. Stick to a section or jump using the mini-nav."
-            align="center"
-          />
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Features"
+        title="More than chat. A companion that grows with you."
+        description="Leylapp spans voice, ritual, and memory modes—plus four personas you can blend together."
+        image="/teacher.jpg"
+        ctaLabel="Download Leylapp"
+        ctaHref="/download"
+      />
       <section className="pb-24">
         <Container className="grid gap-10 lg:grid-cols-[240px,1fr]">
           <aside className="hidden lg:block">

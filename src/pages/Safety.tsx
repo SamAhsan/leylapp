@@ -1,15 +1,16 @@
-﻿import Container from '../components/Container';
+import Container from '../components/Container';
 import SectionHeader from '../components/SectionHeader';
 import CTAButton from '../components/CTAButton';
 import Waveform from '../components/Waveform';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 import { safetySections } from '../data/safety';
 
 const Safety = () => (
   <>
     <SEO
-      title="Safety & Privacy — Leylapp"
-      description="Companionship is personal — privacy is non-negotiable. Review Leylapp's data control, guardrails, age policy, and crisis resources."
+      title="Safety & Privacy - Leylapp"
+      description="Companionship is personal - privacy is non-negotiable. Review Leylapp's data control, guardrails, age policy, and crisis resources."
       path="/safety"
       jsonLd={{
         '@context': 'https://schema.org',
@@ -18,15 +19,17 @@ const Safety = () => (
         description: 'Learn how Leylapp handles data control, on-device vs cloud, guardrails, and crisis resources.',
       }}
     />
-    <section className="section-padding">
+    <PageHero
+      eyebrow="Safety & privacy"
+      title="Companionship is personal & privacy is non-negotiable."
+      description="Leylapp gives you granular control over memory, storage, and reporting. We publish transparency reports every quarter."
+      image="/family.jpg"
+      ctaLabel="Contact privacy team"
+      ctaHref="mailto:privacy@Leylapp.app"
+    />
+    <section className="py-10">
       <Container>
-        <SectionHeader
-          eyebrow="Safety & privacy"
-          title="Companionship is personal — privacy is non-negotiable."
-          subtitle="Leylapp gives you granular control over memory, storage, and reporting. We publish transparency reports every quarter."
-          align="center"
-        />
-        <Waveform className="mx-auto mt-8 max-w-xs" />
+        <Waveform className="mx-auto max-w-xs" />
       </Container>
     </section>
     <section className="section-padding bg-neutral-50">
@@ -56,4 +59,3 @@ const Safety = () => (
 );
 
 export default Safety;
-
