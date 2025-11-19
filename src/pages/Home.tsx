@@ -88,6 +88,7 @@ const Home = () => {
       <Container className="relative z-10 w-full">
         <div className="mx-auto max-w-4xl space-y-8">
         <motion.div
+          key={currentCategory.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
