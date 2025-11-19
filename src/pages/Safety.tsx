@@ -1,5 +1,4 @@
 import Container from '../components/Container';
-import SectionHeader from '../components/SectionHeader';
 import CTAButton from '../components/CTAButton';
 import Waveform from '../components/Waveform';
 import SEO from '../components/SEO';
@@ -59,3 +58,4 @@ const Safety = () => (
 );
 
 export default Safety;
+

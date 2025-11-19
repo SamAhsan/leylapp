@@ -1,6 +1,5 @@
-﻿import clsx from 'clsx';
+import clsx from 'clsx';
 import Container from '../components/Container';
-import SectionHeader from '../components/SectionHeader';
 import CTAButton from '../components/CTAButton';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
@@ -15,14 +14,14 @@ const Features = () => {
   return (
     <>
       <SEO
-        title="Leylapp Features — Voice, Memory, Safety"
+        title="Leylapp Features Voice, Memory, Safety"
         description="Explore Leylapp's natural voice, long-term memory, custom personalities, rituals, and safety center."
         path="/features"
       />
       <PageHero
         eyebrow="Features"
         title="More than chat. A companion that grows with you."
-        description="Leylapp spans voice, ritual, and memory modes—plus four personas you can blend together."
+        description="Leylapp spans voice, ritual, and memory modes�plus four personas you can blend together."
         image="/teacher.jpg"
         ctaLabel="Download Leylapp"
         ctaHref="/download"
@@ -106,4 +105,5 @@ const Features = () => {
 };
 
 export default Features;
+
 

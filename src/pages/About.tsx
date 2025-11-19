@@ -1,5 +1,4 @@
-﻿import Container from '../components/Container';
-import SectionHeader from '../components/SectionHeader';
+import Container from '../components/Container';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 
@@ -24,7 +23,7 @@ const About = () => (
     />
     <PageHero
       eyebrow="About Leylapp"
-      title="Technology that listens — helping people feel less alone."
+      title="Technology that listens � helping people feel less alone."
       description="We started Leylapp after realizing most nights end with a glowing screen and no one to talk to. Leylapp is the bridge."
       image="/girlfriend.jpg"
       ctaLabel="Download Leylapp"
@@ -78,3 +77,4 @@ const About = () => (
 );
 
 export default About;
+
